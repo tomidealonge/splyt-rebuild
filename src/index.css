@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import "tailwindcss";
+
+
+@theme {
+  --color-walnut: #523122;
+  --color-caramel: #A26833;
+  --color-bronze: #E3A458;
+  --color-honey: #C28C42;
+  --color-cream: #FAEADE;
+  --color-vanilla: #FDEBD2;
+  --color-linen: #E8DDCA;
+  --color-charcoal: #222123;
+  --color-espresso: #865720;
+
+  --font-sans: Antonio, sans-serif;
+  --font-paragraph: Inter, sans-serif;
+
+  --font-size-display-xl: clamp(3.25rem, 8vw, 9.375rem);
+  
+}
+
+html,body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--color-walnut);
+  background-color: black;
+  font-family: var(--font-sans);
+  /* overflow-x: hidden; */
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+@layer utilities {
+  .general-title {
+    font-size: var(--font-size-display-xl);
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: calc(clamp(0rem, 0.5vw, 0.48rem) * -1);
+  }
+
+  .slanted-title {
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: calc(clamp(0rem, 0.5vw, 0.48rem) * -1);
+    border-width: 7px;
+    border-style: solid;
+    font-size: var(--font-size-display-xl);
+    transform: rotate(-2deg);
+    display: inline-flex;
+    will-change: clip-path;
+  }
+
+  .benefit-title {
+    font-size: clamp(1.6rem, calc(2rem + 3.055vw), 6.654rem);
+    letter-spacing: clamp(-0.48rem, calc(-0.18rem + 0.214vw), -0.1875rem);
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 1;
+    will-change: clip-path;
+    border-width: 9px;
+  }
+
+  .product-card {
+    font-size: clamp(1.542rem, calc(1.542rem + 2.337vw), 3.719rem);
+    color: var(--color-cream);
+    line-height: clamp(1.619rem, calc(1.619rem + 3.435vw), 3.906rem);
+    font-family: var(--font-sans);
+    letter-spacing: clamp(-0.12rem, calc(-0.12rem + 0.075vw), -0.05rem);
+  }
+
+  .testimonial-title {
+    font-size: clamp(5.5rem, calc(2.5rem + 20.27vw), 21.075rem);
+    line-height: 1.06;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: clamp(-0.48rem, calc(-0.48rem + 0.516vw), 0rem);
+  }
+
+  .flex-center {
+    @apply flex justify-center items-center
+  }
+
+  .absolute-center {
+    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+  }
+}
+
+
+
+@layer components {
+  .button {
+    @apply font-sans px-[43px] py-[15px] rounded-[60px] cursor-pointer z-10 focus:outline-walnut
+  }
+}
