@@ -77,7 +77,7 @@ function FooterComponent() {
           </div>
         </div>
 
-        <div className="flex flex-wrap gap-4 w-full justify-between opacity-50 mb-[27px] font-paragraph text-[14px] text-cream">
+        <div className="flex flex-wrap gap-4 w-full justify-between opacity-50 pb-[27px] font-paragraph text-[14px] text-cream">
           <div>Copyright © 2025 Spylt - All Rights Reserved</div>
 
           <div className="flex gap-x-[38px]">

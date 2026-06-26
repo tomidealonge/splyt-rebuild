@@ -23,6 +23,7 @@ function FlavoursComponent() {
         start: 'top 50%',
       },
     })
+
     const titleOneSplit = new SplitText(titleOne.current, { type: 'chars' })
     const titleTwoSplit = new SplitText(titleTwo.current, { type: 'chars' })
 
@@ -77,13 +78,13 @@ function FlavoursComponent() {
       })
 
       textParallaxTl
-        .to('.title-1', { xPercent: 30, ease: 'power1.out', duration: 0.5 }, 0)
+        .to('.title-1', { xPercent: -30, ease: 'power1.out', duration: 0.5 }, 0)
         .to(
           slantedTitle.current,
-          { xPercent: 24, ease: 'power1.out', duration: 0.5 },
+          { xPercent: -24, ease: 'power1.out', duration: 0.5 },
           0
         )
-        .to('.title-2', { xPercent: 16, ease: 'power1.out', duration: 0.5 }, 0)
+        .to('.title-2', { xPercent: -16, ease: 'power1.out', duration: 0.5 }, 0)
 
       // return () => mm.revert()
     })
