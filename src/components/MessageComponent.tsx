@@ -4,11 +4,11 @@ import { SplitText } from 'gsap/SplitText'
 import { useRef } from 'react'
 
 function MessageComponent() {
-  const firstText = useRef(null)
-  const secondText = useRef(null)
-  const slantedText = useRef(null)
-  const bodyText = useRef(null)
-  const messageSection = useRef(null)
+  const firstText = useRef<HTMLDivElement>(null)
+  const secondText = useRef<HTMLDivElement>(null)
+  const slantedText = useRef<HTMLDivElement>(null)
+  const bodyText = useRef<HTMLDivElement>(null)
+  const messageSection = useRef<HTMLDivElement>(null)
 
   useGSAP(() => {
     let firstTextSplit = new SplitText(firstText.current, {

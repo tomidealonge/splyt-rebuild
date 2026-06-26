@@ -7,10 +7,10 @@ import { SplitText } from 'gsap/all'
 import { useScreenType } from '../hooks/useScreenSize'
 
 function NutritionComponent() {
-  const title = useRef(null)
-  const slantedTitle = useRef(null)
-  const bodyMessage = useRef(null)
-  const content = useRef(null)
+  const title = useRef<HTMLDivElement>(null)
+  const slantedTitle = useRef<HTMLDivElement>(null)
+  const bodyMessage = useRef<HTMLDivElement>(null)
+  const content = useRef<HTMLDivElement>(null)
   const { isMobile, isDesktop } = useScreenType()
   const [nutritionList, setNutritionList] = useState(nutrientLists)
 

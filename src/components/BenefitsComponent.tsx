@@ -4,7 +4,7 @@ import { useRef } from 'react'
 import ClipVideoComponent from './ClipVideoComponent'
 
 function BenefitsComponent() {
-  const wrapper = useRef(null)
+  const wrapper = useRef<HTMLDivElement>(null)
 
   useGSAP(() => {
     const titlesArray = gsap.utils.toArray<HTMLElement>(

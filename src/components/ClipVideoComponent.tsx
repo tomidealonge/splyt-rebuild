@@ -4,7 +4,7 @@ import { useRef } from 'react'
 import gsap from 'gsap'
 
 function ClipVideoComponent() {
-  const videoWrapper = useRef(null)
+  const videoWrapper = useRef<HTMLDivElement>(null)
 
   useGSAP(() => {
     gsap.set(videoWrapper.current, {

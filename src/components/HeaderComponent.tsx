@@ -6,10 +6,10 @@ import { SplitText } from 'gsap/SplitText'
 import { useScreenType } from '../hooks/useScreenSize'
 
 function HeaderComponent() {
-  const header = useRef(null)
-  const headline = useRef(null)
-  const slantedText = useRef(null)
-  const heroContent = useRef(null)
+  const header = useRef<HTMLDivElement>(null)
+  const headline = useRef<HTMLDivElement>(null)
+  const slantedText = useRef<HTMLDivElement>(null)
+  const heroContent = useRef<HTMLDivElement>(null)
   const { isMobile } = useScreenType()
 
   useGSAP(() => {

@@ -7,12 +7,12 @@ import { SplitText } from 'gsap/all'
 import ButtonComponent from './ButtonComponent'
 
 function FlavoursComponent() {
-  const titleOne = useRef(null)
-  const titleTwo = useRef(null)
-  const slantedTitle = useRef(null)
-  const wrapper = useRef(null)
-  const slider = useRef(null)
-  const sliderInner = useRef(null)
+  const titleOne = useRef<HTMLDivElement>(null)
+  const titleTwo = useRef<HTMLDivElement>(null)
+  const slantedTitle = useRef<HTMLDivElement>(null)
+  const wrapper = useRef<HTMLDivElement>(null)
+  const slider = useRef<HTMLDivElement>(null)
+  const sliderInner = useRef<HTMLDivElement>(null)
 
   useGSAP(() => {
     gsap.registerPlugin(SplitText)

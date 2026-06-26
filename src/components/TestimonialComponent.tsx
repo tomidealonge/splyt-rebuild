@@ -13,10 +13,10 @@ interface testimonial {
 }
 
 function TestimonialComponent() {
-  const titleOne = useRef(null)
-  const titleTwo = useRef(null)
-  const titleThree = useRef(null)
-  const wrapper = useRef(null)
+  const titleOne = useRef<HTMLDivElement>(null)
+  const titleTwo = useRef<HTMLDivElement>(null)
+  const titleThree = useRef<HTMLDivElement>(null)
+  const wrapper = useRef<HTMLDivElement>(null)
 
   useGSAP(() => {
     const textTl = gsap.timeline({

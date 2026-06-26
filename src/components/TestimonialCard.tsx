@@ -13,7 +13,7 @@ interface Props {
 function TestimonialCard({
   testimonial: { src, rotation, name, img, translation },
 }: Props) {
-  const video = useRef(null)
+  const video = useRef<HTMLDivElement>(null)
 
   const handleMouseEnter = () => {
     video.current?.play()
