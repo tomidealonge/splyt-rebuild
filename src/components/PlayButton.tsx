@@ -186,7 +186,6 @@ function PlayButton() {
         </g>
         <foreignObject x="27.562" y="27.5449" width="195.005" height="195.015">
           <div
-            xmlns="http://www.w3.org/1999/xhtml"
             style={{
               backdropFilter: 'blur(10px)',
               clipPath: 'url(#bgblur_4_1_207_clip_path)',

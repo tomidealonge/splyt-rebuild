@@ -6,7 +6,7 @@ interface Props {
     rotation: string
     name: string
     img: string
-    translation: string
+    translation?: string
   }
 }
 
@@ -16,12 +16,11 @@ function TestimonialCard({
   const video = useRef(null)
 
   const handleMouseEnter = () => {
-    video.current.play()
+    video.current?.play()
   }
 
   const handleMouseLeave = () => {
-    video.current.pause()
-    // video.current.currentTime = 0
+    video.current?.pause()
   }
 
   return (

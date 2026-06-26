@@ -56,37 +56,45 @@ function FlavoursComponent() {
     const mm = gsap.matchMedia()
 
     mm.add('(min-width: 768px)', () => {
-      gsap.to(slider.current, {
-        scrollTrigger: {
-          trigger: wrapper.current,
-          start: 'top 0%',
-          end: `+=${sliderInner.current.offsetWidth}`,
-          pin: true,
-          scrub: 1.5,
-        },
-        x: -sliderInner.current.offsetWidth,
-        ease: 'power1.inOut',
-      })
+      if (sliderInner.current) {
+        gsap.to(slider.current, {
+          scrollTrigger: {
+            trigger: wrapper.current,
+            start: 'top 0%',
+            end: `+=${sliderInner.current.offsetWidth}`,
+            pin: true,
+            scrub: 1.5,
+          },
+          x: -sliderInner.current.offsetWidth,
+          ease: 'power1.inOut',
+        })
 
-      const textParallaxTl = gsap.timeline({
-        scrollTrigger: {
-          trigger: wrapper.current,
-          start: 'top top',
-          scrub: true,
-          // markers: true,
-        },
-      })
+        const textParallaxTl = gsap.timeline({
+          scrollTrigger: {
+            trigger: wrapper.current,
+            start: 'top top',
+            scrub: true,
+            // markers: true,
+          },
+        })
 
-      textParallaxTl
-        .to('.title-1', { xPercent: -30, ease: 'power1.out', duration: 0.5 }, 0)
-        .to(
-          slantedTitle.current,
-          { xPercent: -24, ease: 'power1.out', duration: 0.5 },
-          0
-        )
-        .to('.title-2', { xPercent: -16, ease: 'power1.out', duration: 0.5 }, 0)
-
-      // return () => mm.revert()
+        textParallaxTl
+          .to(
+            '.title-1',
+            { xPercent: -30, ease: 'power1.out', duration: 0.5 },
+            0
+          )
+          .to(
+            slantedTitle.current,
+            { xPercent: -24, ease: 'power1.out', duration: 0.5 },
+            0
+          )
+          .to(
+            '.title-2',
+            { xPercent: -16, ease: 'power1.out', duration: 0.5 },
+            0
+          )
+      }
     })
   })
 

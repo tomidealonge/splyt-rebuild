@@ -53,7 +53,7 @@ export function usePreloadAssets({
       }
     }
 
-    const withTimeout = (promise: Promise<void>) =>
+    const withTimeout = <T,>(promise: Promise<T>): Promise<T | void> =>
       Promise.race([
         promise,
         new Promise<void>((resolve) => {
@@ -88,7 +88,11 @@ export function usePreloadAssets({
     const tasks: Promise<void>[] = []
 
     if (fonts) {
-      tasks.push(withTimeout(document.fonts.ready).finally(updateProgress))
+      tasks.push(
+        withTimeout(document?.fonts?.ready)
+          .then(() => undefined)
+          .finally(updateProgress)
+      )
     }
 
     assets.forEach((asset) => {

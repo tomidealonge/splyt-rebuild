@@ -9,7 +9,7 @@ interface testimonial {
   rotation: string
   name: string
   img: string
-  translation: string
+  translation?: string
 }
 
 function TestimonialComponent() {
