@@ -2,37 +2,43 @@ import HeaderComponent from './components/HeaderComponent'
 import MessageComponent from './components/MessageComponent'
 import Navbar from './components/Navbar'
 import 'lenis/dist/lenis.css'
-import { ReactLenis, useLenis } from 'lenis/react'
+import { ReactLenis } from 'lenis/react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { useEffect, useState } from 'react'
 import FlavoursComponent from './components/FlavoursComponent'
 import NutritionComponent from './components/NutritionComponent'
 import BenefitsComponent from './components/BenefitsComponent'
-import ClipVideoComponent from './components/ClipVideoComponent'
 import TestimonialComponent from './components/TestimonialComponent'
 import FooterComponent from './components/FooterComponent'
+import { usePreloadAssets } from './hooks/usePreloadAssets'
+import LoadingComponent from './components/LoadingComponent'
 
 function App() {
-  const [isFontReady, setFontReady] = useState(false)
-
-  useEffect(() => {
-    document.fonts.ready.then(() => setFontReady(true))
-  }, [])
+  const { ready, progress } = usePreloadAssets({
+    fonts: true,
+    timeout: 8000,
+    assets: [
+      {
+        type: 'image',
+        src: '/images/hero-img.png',
+      },
+      {
+        type: 'image',
+        src: '/images/hero-bg.png',
+      },
+      {
+        type: 'video',
+        src: '/videos/hero-bg.mp4',
+      },
+    ],
+  })
 
   gsap.registerPlugin(ScrollTrigger)
 
-  const lenis = useLenis((lenis) => {
-    // called every scroll
-    // console.log(lenis)
-  })
-
   return (
     <div>
-      {!isFontReady ? (
-        <div className="w-full h-[100dvh] flex-center">
-          <div className="general-title">Loading...</div>
-        </div>
+      {!ready ? (
+        <LoadingComponent progress={progress} />
       ) : (
         <div className="overflow-hidden">
           <ReactLenis root />
