@@ -1,15 +1,26 @@
 import { useGSAP } from '@gsap/react'
 import { nutrientLists } from '../constants'
 import WavySVG from './WavySVG'
-import { useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
 import { SplitText } from 'gsap/all'
+import { useScreenType } from '../hooks/useScreenSize'
 
 function NutritionComponent() {
   const title = useRef(null)
   const slantedTitle = useRef(null)
   const bodyMessage = useRef(null)
   const content = useRef(null)
+  const { isMobile, isDesktop } = useScreenType()
+  const [nutritionList, setNutritionList] = useState(nutrientLists)
+
+  useEffect(() => {
+    if (isMobile) {
+      setNutritionList(nutrientLists.slice(0, 2))
+    } else {
+      setNutritionList(nutrientLists)
+    }
+  }, [isDesktop, isMobile])
 
   useGSAP(() => {
     const titleSplit = new SplitText(title.current, { type: 'chars' })
@@ -77,11 +88,11 @@ function NutritionComponent() {
         />
 
         <div className="bg-vanilla border-[9px] flex justify-between relative py-[37px] px-[20px] border-linen max-w-[1335px] md:w-[69%] mx-auto rounded-[192px]">
-          {nutrientLists.map((nutrient, index) => (
+          {nutritionList.map((nutrient, index) => (
             <div
               key={nutrient.label}
               className={`flex justify-center grow items-center ${
-                index + 1 < nutrientLists.length &&
+                index + 1 < nutritionList.length &&
                 'border-r-[1px] border-r-espresso'
               }`}
             >

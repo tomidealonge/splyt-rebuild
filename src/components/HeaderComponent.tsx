@@ -3,12 +3,14 @@ import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { useRef } from 'react'
 import { SplitText } from 'gsap/SplitText'
+import { useScreenType } from '../hooks/useScreenSize'
 
 function HeaderComponent() {
   const header = useRef(null)
   const headline = useRef(null)
   const slantedText = useRef(null)
   const heroContent = useRef(null)
+  const { isMobile } = useScreenType()
 
   useGSAP(() => {
     gsap.to(header.current, {
@@ -64,6 +66,16 @@ function HeaderComponent() {
         muted
         className="absolute inset-0 w-full h-full object-cover"
       />
+      <img
+        className="absolute inset-0 w-full object-contain"
+        src="/images/hero-bg.png"
+      />
+      {isMobile && (
+        <img
+          className="absolute top-auto bottom-0 w-full object-contain"
+          src="/images/hero-img.png"
+        />
+      )}
       <div
         ref={heroContent}
         className="flex-center relative z-10 self-start md:self-auto flex-col opacity-0 translate-y-[20%]"
