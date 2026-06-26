@@ -94,6 +94,10 @@ body::-webkit-scrollbar {
   .absolute-center {
     @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
   }
+
+  .social-media {
+    @apply flex justify-center items-center w-[72px] md:w-[96px] aspect-square rounded-full border border-[#FAEADE33]
+  }
 }
 
 

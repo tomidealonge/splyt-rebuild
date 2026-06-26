@@ -56,11 +56,17 @@ function HeaderComponent() {
   return (
     <header
       ref={header}
-      className="flex-center max-h-[1200px] md:py-[310px] pt-[82px] h-[100dvh] bg-cream"
+      className="flex-center relative max-h-[1200px] md:py-[310px] pt-[82px] h-[100dvh] bg-cream"
     >
+      <video
+        src="/videos/hero-bg.mp4"
+        autoPlay
+        muted
+        className="absolute inset-0 w-full h-full object-cover"
+      />
       <div
         ref={heroContent}
-        className="flex-center self-start md:self-auto flex-col opacity-0 translate-y-[20%]"
+        className="flex-center relative z-10 self-start md:self-auto flex-col opacity-0 translate-y-[20%]"
       >
         <div className="mb-[23px] md:mb-[45px]">
           <div className="general-title overflow-hidden">

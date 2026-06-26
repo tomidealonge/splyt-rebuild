@@ -11,6 +11,7 @@ import NutritionComponent from './components/NutritionComponent'
 import BenefitsComponent from './components/BenefitsComponent'
 import ClipVideoComponent from './components/ClipVideoComponent'
 import TestimonialComponent from './components/TestimonialComponent'
+import FooterComponent from './components/FooterComponent'
 
 function App() {
   const [isFontReady, setFontReady] = useState(false)
@@ -42,6 +43,7 @@ function App() {
           <NutritionComponent />
           <BenefitsComponent />
           <TestimonialComponent />
+          <FooterComponent />
         </div>
       )}
     </div>

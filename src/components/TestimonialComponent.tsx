@@ -25,7 +25,7 @@ function TestimonialComponent() {
         start: 'top 90%',
         end: '+=200%',
         scrub: true,
-        markers: true,
+        // markers: true,
       },
     })
 
@@ -70,7 +70,7 @@ function TestimonialComponent() {
   })
 
   return (
-    <div ref={wrapper} className="bg-cream h-dvh -mt-[100vh] relative z-20">
+    <div ref={wrapper} className=" bg-cream h-dvh -mt-[100vh] relative z-20">
       <div className="text-center">
         <div ref={titleOne} className="testimonial-title text-charcoal">
           <h3>What's</h3>
