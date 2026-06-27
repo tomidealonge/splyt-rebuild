@@ -22,114 +22,114 @@ function App() {
         type: 'image',
         src: '/images/hero-img.png',
       },
-      {
-        type: 'image',
-        src: '/images/black-drink.webp',
-      },
-      {
-        type: 'image',
-        src: '/images/black-elements.webp',
-      },
-      {
-        type: 'image',
-        src: '/images/black-bg.svg',
-      },
-      {
-        type: 'image',
-        src: '/images/blue-elements.webp',
-      },
-      {
-        type: 'image',
-        src: '/images/blue-bg.svg',
-      },
-      {
-        type: 'image',
-        src: '/images/blue-drink.webp',
-      },
-      {
-        type: 'image',
-        src: '/images/brown-elements.webp',
-      },
-      {
-        type: 'image',
-        src: '/images/brown-bg.svg',
-      },
-      {
-        type: 'image',
-        src: '/images/brown-drink.webp',
-      },
-      {
-        type: 'image',
-        src: '/images/orange-elements.webp',
-      },
-      {
-        type: 'image',
-        src: '/images/orange-bg.svg',
-      },
-      {
-        type: 'image',
-        src: '/images/orange-drink.webp',
-      },
-      {
-        type: 'image',
-        src: '/images/white-elements.webp',
-      },
-      {
-        type: 'image',
-        src: '/images/white-bg.svg',
-      },
-      {
-        type: 'image',
-        src: '/images/white-drink.webp',
-      },
-      {
-        type: 'image',
-        src: '/images/red-elements.webp',
-      },
-      {
-        type: 'image',
-        src: '/images/red-bg.svg',
-      },
-      {
-        type: 'image',
-        src: '/images/red-drink.webp',
-      },
-      {
-        type: 'image',
-        src: '/images/hero-bg.png',
-      },
+      // {
+      //   type: 'image',
+      //   src: '/images/black-drink.webp',
+      // },
+      // {
+      //   type: 'image',
+      //   src: '/images/black-elements.webp',
+      // },
+      // {
+      //   type: 'image',
+      //   src: '/images/black-bg.svg',
+      // },
+      // {
+      //   type: 'image',
+      //   src: '/images/blue-elements.webp',
+      // },
+      // {
+      //   type: 'image',
+      //   src: '/images/blue-bg.svg',
+      // },
+      // {
+      //   type: 'image',
+      //   src: '/images/blue-drink.webp',
+      // },
+      // {
+      //   type: 'image',
+      //   src: '/images/brown-elements.webp',
+      // },
+      // {
+      //   type: 'image',
+      //   src: '/images/brown-bg.svg',
+      // },
+      // {
+      //   type: 'image',
+      //   src: '/images/brown-drink.webp',
+      // },
+      // {
+      //   type: 'image',
+      //   src: '/images/orange-elements.webp',
+      // },
+      // {
+      //   type: 'image',
+      //   src: '/images/orange-bg.svg',
+      // },
+      // {
+      //   type: 'image',
+      //   src: '/images/orange-drink.webp',
+      // },
+      // {
+      //   type: 'image',
+      //   src: '/images/white-elements.webp',
+      // },
+      // {
+      //   type: 'image',
+      //   src: '/images/white-bg.svg',
+      // },
+      // {
+      //   type: 'image',
+      //   src: '/images/white-drink.webp',
+      // },
+      // {
+      //   type: 'image',
+      //   src: '/images/red-elements.webp',
+      // },
+      // {
+      //   type: 'image',
+      //   src: '/images/red-bg.svg',
+      // },
+      // {
+      //   type: 'image',
+      //   src: '/images/red-drink.webp',
+      // },
+      // {
+      //   type: 'image',
+      //   src: '/images/hero-bg.png',
+      // },
       {
         type: 'video',
         src: '/videos/hero-bg.mp4',
       },
-      {
-        type: 'video',
-        src: '/videos/f1.mp4',
-      },
-      {
-        type: 'video',
-        src: '/videos/f2.mp4',
-      },
-      {
-        type: 'video',
-        src: '/videos/f3.mp4',
-      },
-      {
-        type: 'video',
-        src: '/videos/f4.mp4',
-      },
-      {
-        type: 'video',
-        src: '/videos/f5.mp4',
-      },
-      {
-        type: 'video',
-        src: '/videos/f6.mp4',
-      },
-      {
-        type: 'video',
-        src: '/videos/f7.mp4',
-      },
+      // {
+      //   type: 'video',
+      //   src: '/videos/f1.mp4',
+      // },
+      // {
+      //   type: 'video',
+      //   src: '/videos/f2.mp4',
+      // },
+      // {
+      //   type: 'video',
+      //   src: '/videos/f3.mp4',
+      // },
+      // {
+      //   type: 'video',
+      //   src: '/videos/f4.mp4',
+      // },
+      // {
+      //   type: 'video',
+      //   src: '/videos/f5.mp4',
+      // },
+      // {
+      //   type: 'video',
+      //   src: '/videos/f6.mp4',
+      // },
+      // {
+      //   type: 'video',
+      //   src: '/videos/f7.mp4',
+      // },
     ],
   })
 
