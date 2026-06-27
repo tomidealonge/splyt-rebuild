@@ -51,7 +51,7 @@ function ButtonComponent({
   }, [])
 
   return (
-    <div className="relative inline-flex">
+    <div className="relative inline-flex font-bold">
       <button
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
