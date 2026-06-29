@@ -14,7 +14,7 @@ import { usePreloadAssets } from './hooks/usePreloadAssets'
 import LoadingComponent from './components/LoadingComponent'
 
 function App() {
-  const { ready, progress } = usePreloadAssets({
+  const { ready } = usePreloadAssets({
     fonts: true,
     timeout: 8000,
     assets: [
