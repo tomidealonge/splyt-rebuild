@@ -138,7 +138,7 @@ function App() {
   return (
     <div>
       {!ready ? (
-        <LoadingComponent progress={progress} />
+        <LoadingComponent />
       ) : (
         <div className="overflow-hidden">
           <ReactLenis root />

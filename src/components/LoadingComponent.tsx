@@ -1,11 +1,7 @@
-interface Props {
-  progress: number
-}
-
-function LoadingComponent({ progress }: Props) {
+function LoadingComponent() {
   return (
     <div className="w-full h-[100dvh] flex-center">
-      <div className="general-title">Loading {progress}</div>
+      <div className="general-title">Loading</div>
     </div>
   )
 }
