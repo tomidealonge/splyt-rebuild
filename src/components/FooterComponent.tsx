@@ -20,13 +20,13 @@ function FooterComponent() {
       </div>
 
       <div className="flex-center relative gap-x-[20px] md:mb-[191px] mb-[150px]">
-        <div className="social-media">
+        <div className="social-media cursor-pointer">
           <Youtube />
         </div>
-        <div className="social-media">
+        <div className="social-media cursor-pointer">
           <Instagram />
         </div>
-        <div className="social-media">
+        <div className="social-media cursor-pointer">
           <TikTok />
         </div>
       </div>
@@ -35,17 +35,17 @@ function FooterComponent() {
         <div className="flex justify-between flex-wrap gap-10">
           <div className="md:gap-x-[67px] gap-8 flex flex-wrap">
             <div className="font-paragraph text-cream">
-              <span>SPYLT Flavors</span>
+              <span className="cursor-pointer">SPYLT Flavors</span>
             </div>
             <div className="font-paragraph text-cream flex flex-col gap-y-[10px]">
-              <span>Chug Club</span>
-              <span>Student Marketing</span>
-              <span>Dairy Dealers</span>
+              <span className="cursor-pointer">Chug Club</span>
+              <span className="cursor-pointer">Student Marketing</span>
+              <span className="cursor-pointer">Dairy Dealers</span>
             </div>
             <div className="font-paragraph text-cream flex flex-col gap-y-[10px]">
-              <span>Chug Club</span>
-              <span>Student Marketing</span>
-              <span>Dairy Dealers</span>
+              <span className="cursor-pointer">Chug Club</span>
+              <span className="cursor-pointer">Student Marketing</span>
+              <span className="cursor-pointer">Dairy Dealers</span>
             </div>
           </div>
 

@@ -96,8 +96,15 @@ body::-webkit-scrollbar {
   }
 
   .social-media {
-    @apply flex justify-center items-center w-[72px] md:w-[96px] aspect-square rounded-full border border-[#FAEADE33]
+    @apply flex justify-center items-center w-[72px] md:w-[96px] text-cream aspect-square rounded-full border border-[#FAEADE33];
+
   }
+
+  .social-media:hover {
+    background-color: white;
+    color: var(--color-walnut);
+  }
+
 }
 
 
